@@ -86,5 +86,11 @@ namespace csharpDevs
                 yield return fruits[r.Next(3)];
             }
         }
+
+
+        //Access an element of index 0
+        //arr[0]
+
+
     }
 }

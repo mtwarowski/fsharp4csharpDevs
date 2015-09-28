@@ -43,3 +43,8 @@ let RandomFruits2 count =
         let index = r.Next(3)
         fruits.[index]
     )
+
+
+//Access an element of index 0
+//arr.[0]
+
