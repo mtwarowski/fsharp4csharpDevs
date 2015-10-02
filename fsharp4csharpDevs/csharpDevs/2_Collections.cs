@@ -91,6 +91,33 @@ namespace csharpDevs
         //Access an element of index 0
         //arr[0]
 
+        //Array Iterating
+        public void IteratingArray(int[] arrNumb)
+        {
+            foreach (var num in arrNumb)
+            {
+                Console.WriteLine("i am number: %i", num);
+            }
+        }
 
+        //Filtering Arrays
+        //What im gonna filter:
+
+        //base on condition
+        static bool IsEven(int n) { return n % 2 == 0; }
+
+        //filter results
+        int[] filterResults = GetArray_0_To_99().Where(x => IsEven(x)).ToArray();
+
+        //Sorting filtering and Iterating in one go
+        public void PrintLongWords(string[] words)
+        {
+            var arr = words.Where(w => w.Length > 8).ToArray());
+            Array.Sort(arr);
+            foreach (var arg in arr)
+            {
+                Console.WriteLine(arg);
+            }
+        }
     }
 }

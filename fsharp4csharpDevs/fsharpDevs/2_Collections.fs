@@ -48,3 +48,25 @@ let RandomFruits2 count =
 //Access an element of index 0
 //arr.[0]
 
+
+//Array Iterating
+let IteratingArray arrNumb =
+    for num in arrNumb do
+        printfn "i am number: %i" num
+
+//Filtering Arrays
+//What im gonna filter:
+let arrNumb = [|for i in 0..5..99 do yield i * i|]
+
+//base on condition
+let IsEven n = n % 2 = 0
+
+//filter results
+let filterResults = Array.filter (fun x -> IsEven x) arrNumb
+
+//Sorting filtering and Iterating in one go
+let PrintLongWords(words: string[]) =
+    words
+    |> Array.filter(fun w -> w.Length > 8)
+    |> Array.sort
+    |> Array.iter(fun w -> printfn w)
